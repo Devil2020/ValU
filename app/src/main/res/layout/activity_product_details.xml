@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.detail.ProductDetailsActivity">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/CenterGuidline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/DetailToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="@dimen/_20sdp"
+            app:navigationIcon="@drawable/icon_ionic_ios_arrow_round_back" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/detail_all"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/DetailToolbar" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/detail_bottom"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/CenterGuidline" />
+
+        <LinearLayout
+            android:id="@+id/Rate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@id/CenterGuidline"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/RateImageBar"
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:src="@drawable/rate" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/RateValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:textAppearance="@style/Baloothambi2_bold"
+                android:textColor="#ffc72b"
+                android:textSize="@dimen/_20ssp"
+                app:layout_constraintBottom_toBottomOf="@id/RateImageBar"
+                app:layout_constraintStart_toEndOf="@id/RateImageBar"
+                app:layout_constraintTop_toTopOf="@id/RateImageBar"
+                tools:text="139.02" />
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/PriceValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_2sdp"
+            android:textAppearance="@style/Baloothambi2_bold"
+            android:textColor="#060DD9"
+            android:textSize="@dimen/_20ssp"
+            app:layout_constraintBottom_toTopOf="@id/Rate"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="$120.29" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/NameValue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_2sdp"
+            android:textAppearance="@style/Baloothambi2_bold"
+            android:textColor="#000"
+            android:textSize="@dimen/_20ssp"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            app:layout_constraintBottom_toTopOf="@id/PriceValue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="Beats Solo3 Headphones" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ProductImage"
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_20sdp"
+            app:layout_constraintBottom_toTopOf="@id/NameValue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/DetailToolbar" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/DetailsTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="Details"
+            android:textAppearance="@style/Baloothambi2_bold"
+            android:textColor="#000"
+            android:textSize="@dimen/_18ssp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/CenterGuidline" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/DetailsBody"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:textAppearance="@style/Baloothambi2_medium"
+            android:textColor="#666"
+            android:textSize="@dimen/_18ssp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/DetailsTitle"
+            tools:text="Input Type: 3.5mm stereo jack
+Other Features: Bluetooth, Foldable, Noise Isolation, Stereo, Stereo Bluetooth, Wireless
+Form Factor: On-Ear
+Connections: Bluetooth, Wireless
+Speaker Configurations: Stereo" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/CategoryChip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/DetailsTitle"
+            app:layout_constraintBottom_toBottomOf="@id/DetailsTitle"
+            app:chipBackgroundColor="#f3f3ff"
+            tools:text="Men`s Fashion Wear"
+            android:textAppearance="@style/Baloothambi2_medium"
+            android:layout_marginEnd="@dimen/_10sdp"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

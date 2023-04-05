@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ValU</string>
+    <string name="helloMessage">Hello morse </string>
+    <string name="happyReviewMessage"> Welcome to your products , Happy Browsing &#9995; </string>
+</resources>

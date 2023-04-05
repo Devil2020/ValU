@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+        <color name="purple_200">#FFFFFF</color>
+        <color name="purple_500">#007AFF</color>
+        <color name="purple_700">#004ABA</color>
+        <color name="teal_200">#FF03DAC5</color>
+        <color name="teal_700">#FF018786</color>
+
+        <color name="black">#FF000000</color>
+        <color name="white">#FFFFFFFF</color>
+        <color name="accent">#39b9b2</color>
+        <color name="primary">#f26522</color>
+        <color name="error">#F87575</color>
+        <color name="gray">#333333</color>
+        <color name="orange">#F87F0F</color>
+
+        <color name="blueCard">#EEF7FE</color>
+        <color name="blueHeaderTextCard">#415EB6</color>
+        <color name="blueBodyTextCard">#567DF4</color>
+
+        <color name="yellowCard">#FFFBEC</color>
+        <color name="yellowHeaderTextCard">#FFB110</color>
+        <color name="yellowBodyTextCard">#FFDE6C</color>
+
+        <color name="redCard">#FEEEEE</color>
+        <color name="redHeaderTextCard">#AC4040</color>
+        <color name="redBodyTextCard">#F45656</color>
+
+        <color name="greenCard">#F0FFFF</color>
+        <color name="greenHeaderTextCard">#23B0B0</color>
+        <color name="greenBodyTextCard">#34DEDE</color>
+
+</resources>
