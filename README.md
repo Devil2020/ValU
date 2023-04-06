@@ -5,7 +5,7 @@
 <h1 align="center">ValU Task</h1>
 
 <p align="center">
-     <a href="https://wakatime.com/badge/github/Devil2020/ValU.svg"/><img alt="API" src="https://wakatime.com/badge/github/Devil2020/ValU.svg"/></a>
+     <a href="https://wakatime.com/badge/user/25e36a94-826e-4b90-bf37-6d78d9028422/project/5e5c9051-0e14-4029-90ab-3853c16425a4.svg"/><img alt="API" src="https://wakatime.com/badge/user/25e36a94-826e-4b90-bf37-6d78d9028422/project/5e5c9051-0e14-4029-90ab-3853c16425a4.svg"/></a>
      <a href="https://github.com/devil2020?tab=followers"><img alt="API" src="https://img.shields.io/github/stars/devil2020?style=social"/></a>
 
 </p>
