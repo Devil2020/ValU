@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <Transition
+        app:constraintSetStart="@+id/start"
+        app:constraintSetEnd="@+id/end"
+        app:duration="1000">
+        <OnSwipe
+            app:touchAnchorId="@+id/ProductsRecyclerView"
+            app:touchAnchorSide="top"
+            app:dragDirection="dragUp" />
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+        
+        <Constraint
+            android:id="@+id/Design_Vertical_Starter_GuidLine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.05" />
+
+        <Constraint
+            android:id="@+id/Design_Left_Starter_GuidLine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.05" />
+
+        <Constraint
+            android:id="@+id/Design_Right_Starter_GuidLine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.95" />
+
+        <Constraint
+            android:id="@+id/WelcomeMessageTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:ellipsize="end"
+            android:gravity="start"
+            android:lines="1"
+            android:text="@string/helloMessage"
+            android:textAppearance="@style/Baloothambi2_bold"
+            android:textSize="@dimen/_20ssp"
+            app:layout_constraintEnd_toStartOf="@id/Design_Right_Starter_GuidLine"
+            app:layout_constraintStart_toEndOf="@id/Design_Left_Starter_GuidLine"
+            app:layout_constraintTop_toBottomOf="@id/User_Iv" />
+
+        <Constraint
+            android:id="@+id/ReviewMessageTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:text="@string/happyReviewMessage"
+            android:textAppearance="@style/Baloothambi2_bold"
+            android:textColor="#B0B3BA"
+            android:textSize="@dimen/_14ssp"
+            app:layout_constraintEnd_toStartOf="@id/Design_Right_Starter_GuidLine"
+            app:layout_constraintStart_toEndOf="@id/Design_Left_Starter_GuidLine"
+            app:layout_constraintTop_toBottomOf="@id/WelcomeMessageTextView" />
+
+
+        <Constraint
+            android:id="@+id/User_Iv"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            app:layout_constraintVertical_bias="0.3"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintEnd_toStartOf="@id/Design_Right_Starter_GuidLine"
+            app:layout_constraintStart_toEndOf="@id/Design_Left_Starter_GuidLine"
+            app:layout_constraintTop_toBottomOf="@id/Design_Vertical_Starter_GuidLine"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:src="@drawable/me" />
+
+
+        <Constraint
+            android:id="@+id/ProductsRecyclerView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginBottom="@dimen/_20sdp"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            android:orientation="vertical"
+            app:spanCount="2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/Design_Right_Starter_GuidLine"
+            app:layout_constraintStart_toStartOf="@id/Design_Left_Starter_GuidLine"
+            app:layout_constraintTop_toBottomOf="@id/ReviewMessageTextView"
+            tools:listitem="@layout/product_item_layout" />
+
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:id="@+id/Design_Vertical_Starter_GuidLine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.05" />
+
+        <Constraint
+            android:id="@+id/Design_Left_Starter_GuidLine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.05" />
+
+        <Constraint
+            android:id="@+id/Design_Right_Starter_GuidLine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.95" />
+
+        <Constraint
+            android:id="@+id/WelcomeMessageTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:ellipsize="end"
+            android:gravity="start"
+            android:lines="1"
+            android:text="@string/helloMessage"
+            android:textAppearance="@style/Baloothambi2_bold"
+            android:textSize="@dimen/_14ssp"
+            app:layout_constraintEnd_toStartOf="@id/Design_Right_Starter_GuidLine"
+            app:layout_constraintStart_toEndOf="@id/User_Iv"
+            app:layout_constraintTop_toTopOf="@id/User_Iv" />
+
+        <Constraint
+            android:id="@+id/ReviewMessageTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:text="@string/happyReviewMessage"
+            android:textAppearance="@style/Baloothambi2_bold"
+            android:textColor="#B0B3BA"
+            android:textSize="@dimen/_14ssp"
+            app:layout_constraintEnd_toStartOf="@id/Design_Right_Starter_GuidLine"
+            app:layout_constraintStart_toStartOf="@id/WelcomeMessageTextView"
+            app:layout_constraintTop_toBottomOf="@id/WelcomeMessageTextView" />
+
+
+        <Constraint
+            android:id="@+id/User_Iv"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            app:layout_constraintVertical_bias="0.3"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintEnd_toStartOf="@id/Design_Right_Starter_GuidLine"
+            app:layout_constraintStart_toEndOf="@id/Design_Left_Starter_GuidLine"
+            app:layout_constraintTop_toBottomOf="@id/Design_Vertical_Starter_GuidLine"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:src="@drawable/me" />
+
+
+        <Constraint
+            android:id="@+id/ProductsRecyclerView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginBottom="@dimen/_20sdp"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            android:orientation="vertical"
+            app:spanCount="2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/Design_Right_Starter_GuidLine"
+            app:layout_constraintStart_toStartOf="@id/Design_Left_Starter_GuidLine"
+            app:layout_constraintTop_toBottomOf="@id/ReviewMessageTextView"
+            tools:listitem="@layout/product_item_layout" />
+
+    </ConstraintSet>
+</MotionScene>

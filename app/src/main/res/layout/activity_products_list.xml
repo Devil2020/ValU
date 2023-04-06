@@ -2,13 +2,15 @@
 
 <layout>
 
-    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:id="@+id/root"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.list.ProductsListActivity">
+        tools:context=".ui.list.ProductsListActivity"
+        app:layoutDescription="@xml/product_list_state"
+        >
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/Design_Vertical_Starter_GuidLine"
@@ -41,22 +43,22 @@
             android:lines="1"
             android:text="@string/helloMessage"
             android:textAppearance="@style/Baloothambi2_bold"
-            android:textSize="@dimen/_20ssp"
+            android:textSize="@dimen/_14ssp"
             app:layout_constraintEnd_toStartOf="@id/Design_Right_Starter_GuidLine"
-            app:layout_constraintStart_toEndOf="@id/Design_Left_Starter_GuidLine"
-            app:layout_constraintTop_toBottomOf="@id/User_Iv" />
+            app:layout_constraintStart_toEndOf="@id/User_Iv"
+            app:layout_constraintTop_toTopOf="@id/User_Iv" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/ReviewMessageTextView"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
             android:text="@string/happyReviewMessage"
             android:textAppearance="@style/Baloothambi2_bold"
             android:textColor="#B0B3BA"
             android:textSize="@dimen/_14ssp"
             app:layout_constraintEnd_toStartOf="@id/Design_Right_Starter_GuidLine"
-            app:layout_constraintStart_toEndOf="@id/Design_Left_Starter_GuidLine"
+            app:layout_constraintStart_toStartOf="@id/WelcomeMessageTextView"
             app:layout_constraintTop_toBottomOf="@id/WelcomeMessageTextView" />
 
 
@@ -90,6 +92,6 @@
 
 
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.motion.widget.MotionLayout>
 
 </layout>
