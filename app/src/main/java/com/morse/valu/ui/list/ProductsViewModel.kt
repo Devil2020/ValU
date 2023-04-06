@@ -5,10 +5,8 @@ import androidx.lifecycle.viewModelScope
 import com.morse.valu.data.dto.Response
 import com.morse.valu.data.repository.IProductsRepository
 import com.morse.valu.data.repository.ProductsRepository
-import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.MutableSharedFlow
-import kotlinx.coroutines.flow.launchIn
-import kotlinx.coroutines.flow.onEach
+import kotlinx.coroutines.flow.*
+import org.jetbrains.annotations.TestOnly
 
 class ProductsViewModel constructor(private val repository: IProductsRepository = ProductsRepository()) :
     ViewModel() {
@@ -17,7 +15,13 @@ class ProductsViewModel constructor(private val repository: IProductsRepository 
     val products: Flow<Response> get() = _products
 
     fun loadProducts() {
-        repository.getProducts().onEach { _products.emit(it) }.launchIn(viewModelScope)
+        repository.getProducts()
+            .onEach {
+            _products.emit(it)
+            prod.emit(it)
+        }.launchIn(viewModelScope)
     }
 
+    @get:TestOnly
+    val prod = MutableStateFlow<Response?>(null)
 }
