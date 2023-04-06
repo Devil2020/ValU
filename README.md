@@ -26,34 +26,20 @@ Go to the [Releases](https://github.com/Devil2020/ValU/releases/download/v1.0.0/
 
 
 
-
-
-
-
-
-
-
 ## Tech stack & Open-source libraries
 - Minimum SDK level 24
 - [Kotlin](https://kotlinlang.org/) based, [Coroutines](https://github.com/Kotlin/kotlinx.coroutines) + [Flow](https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.flow/) for asynchronous.
-- [Hilt](https://dagger.dev/hilt/) for dependency injection.
+- [Fundmental Techniques]() for dependency injection i used Fundumental Tecniques like Constructor Injection and Default Values and Some Singelton.
 - JetPack
     - Lifecycle - dispose of observing data when lifecycle state changes.
     - ViewModel - UI related data holder, lifecycle aware.
-    - RunTime Cashe construct a Cache using the abstract layer .
 - Architecture
-    - MVVM Architecture (View - DataBinding - ViewModel - Model)
-    - [Binding Adapter]() - Android DataBinding kit for notifying data changes to UI layers.
-    - Repository pattern
+    - MVVM Architecture (View - DataBinding - ViewModel - Model) .
+    - Repository Pattern & Coordinator Pattern .
 - [Retrofit2 & OkHttp3](https://github.com/square/retrofit) - construct the REST APIs and paging network data.
 - [Gson](https://github.com/square/moshi/) - A modern JSON library for Kotlin and Java.
-- [Picasso](https://square.github.io/picasso/)
-- [Material-Components](https://github.com/material-components/material-components-android) - Material design components like ripple animation, cardView.
-
-
-
-
-
+- [Glide](https://square.github.io/picasso/)
+- [Material-Components](https://github.com/material-components/material-components-android) - Material design components like ripple animation, MotionLayout.
 
 
 
