@@ -22,7 +22,7 @@ Go to the [Releases](https://github.com/Devil2020/Bosta/releases/download/1.0.0/
 
 
 
-<img src=".images/run.gif" align="right" width="32%"/>
+<img src=".images/runn.gif" align="right" width="32%"/>
 
 
 
